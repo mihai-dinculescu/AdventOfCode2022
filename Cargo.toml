@@ -2,4 +2,8 @@
 
 members = [
     "day01",
+    "day02",
 ]
+
+[workspace.dependencies]
+anyhow = "1.0"
