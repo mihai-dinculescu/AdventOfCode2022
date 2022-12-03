@@ -3,7 +3,9 @@
 members = [
     "day01",
     "day02",
+    "day03",
 ]
 
 [workspace.dependencies]
 anyhow = "1.0"
+lazy_static = "1.4"
