@@ -5,8 +5,10 @@ members = [
     "day02",
     "day03",
     "day04",
+    "day05",
 ]
 
 [workspace.dependencies]
 anyhow = "1.0"
 lazy_static = "1.4"
+regex = "1.7"
