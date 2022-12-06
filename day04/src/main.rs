@@ -17,8 +17,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut count_part_2 = 0;
 
     for line in reader.lines() {
-        let line = line.unwrap();
-        let pair = Pair::new(&line).unwrap();
+        let line = line?;
+        let pair = Pair::new(&line)?;
 
         if pair.overlaps() {
             count_part_2 += 1;
