@@ -12,7 +12,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut crane = CrateMover::<CrateMover9000>::new(reader)?;
     crane.move_crates()?;
 
-    println!("Part 1: {}", crane);
+    println!("Part 1: {crane}");
 
     let file = File::open("input.txt")?;
     let reader = BufReader::new(file);
@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut crane = CrateMover::<CrateMover9001>::new(reader)?;
     crane.move_crates()?;
 
-    println!("Part 2: {}", crane);
+    println!("Part 2: {crane}");
 
     Ok(())
 }
