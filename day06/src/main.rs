@@ -13,26 +13,17 @@ fn main() -> Result<(), Box<dyn Error>> {
     let file = File::open("input.txt")?;
     let reader = BufReader::new(file);
 
-    let mut parser = Parser::new(4);
+    let mut parser_part_1 = Parser::new(4);
+    let mut parser_part_2 = Parser::new(14);
 
     for line in reader.lines() {
         let line = line?;
-        parser.parse(&line)?;
+        parser_part_1.parse(&line)?;
+        parser_part_2.parse(&line)?;
     }
 
-    println!("part 1: {}", parser.get_total());
-
-    let file = File::open("input.txt")?;
-    let reader = BufReader::new(file);
-
-    let mut parser = Parser::new(14);
-
-    for line in reader.lines() {
-        let line = line?;
-        parser.parse(&line)?;
-    }
-
-    println!("part 2: {}", parser.get_total());
+    println!("part 1: {}", parser_part_1.get_total());
+    println!("part 2: {}", parser_part_2.get_total());
 
     Ok(())
 }
